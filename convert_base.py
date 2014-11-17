@@ -16,13 +16,20 @@ def toStr(n=0, base=10, convertString = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
   n = int(request.params.get("n"))
   base = int(request.params.get("base"))
   print n, base
-  assert base == base//1 and base > 1 and base < len(convertString)
   
   if base < 2:
-      return {'result': "Please Enter a Base of at least 2",
+        return {'result': "Base of at least 2 please",
 			  'binary': "Please Enter a Base of at least 2",
 			  'hexdec': "Please Enter a Base of at least 2",
 			  'decimal': "Please Enter a Base of at least 2"}
+  
+  if base > 36:
+        return {'result': "Base < 36 please",
+			  'binary': "Please Enter a Base less than 36",
+			  'hexdec': "Please Enter a Base less than 36",
+			  'decimal': "Please Enter a Base less than 36"}
+			  
+  assert base == base//1 and base > 1 and base < len(convertString)
   
   def toStr(n, base):
 		if n< 0: return '-' + toStr(n*-1, base)
