@@ -3,7 +3,7 @@
 
 <head>
     <meta charset='utf-8'>
-    <meta >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Discrete Math</title>
     <link rel="stylesheet" href="/static/kube.min.css" type="text/css" /> 
     <link rel="stylesheet" href="/static/styles.css" type="text/css" />
